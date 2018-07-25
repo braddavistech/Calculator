@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    html{
+      background-color: #4a78b5;
+    }
+    .calculatorBody {
+      position: fixed;
+      background-color:#2e2f30;
+      margin-top: 5vw;
+      margin-left:35vw;
+      width:30vw;
+      height: 40vw;
+      font-size:0vw;
+    }
+    .calcDisplay{
+      width:25vw;
+      margin-top:10vw;
+      margin-left:2.5vw;
+      height:5vw;
+      text-align:right;
+      margin-bottom:2vw;
+    }
+    .calcRow{
+      margin-left:2.5vw;
+    }
+    .calcButton{
+      width:5vw;
+      height:5vw;
+    }
+    .calcEquals{
+      position:fixed;
+      width:5vw;
+      height:20vw;
+      background-color:orange;
+
+    }
+    </style>
+
+    <script type="text/javascript" src="calculator.js"></script>
+
+</head>
+<body>
+  <form class="calculatorBody" name="calculator">
+    <input type="text" class="calcDisplay" id="display" />
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="7" onclick="numInput(7)" />
+      <input type="button" class="calcButton" value="8" onclick="numInput('8')" />
+      <input type="button" class="calcButton" value="9" onclick="numInput('9')" />
+      <input type="button" class="calcButton" value="+" onclick="setOperation('add')" />
+      <input type="button" class="calcEquals" value="=" onclick="calculate()" />
+    </div>
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="4" onclick="numInput('4')" />
+      <input type="button" class="calcButton" value="5" onclick="numInput('5')" />
+      <input type="button" class="calcButton" value="6" onclick="numInput('6')" />
+      <input type="button" class="calcButton" value="-" onclick="setOperation('subtract')" />
+    </div>
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="1" onclick="numInput('1')" />
+      <input type="button" class="calcButton" value="2" onclick="numInput('2')" />
+      <input type="button" class="calcButton" value="3" onclick="numInput('3')" />
+      <input type="button" class="calcButton" value="x" onclick="setOperation('multiply')" />
+    </div>
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="0" onclick="numInput('0')" />
+      <input type="button" class="calcButton" value="." onclick="insertDecimal('.')" />
+      <input type="button" class="calcButton" value="C" onclick="clearDisplay()" />
+      <input type="button" class="calcButton" value="/" onclick="setOperation('divide')" />
+    </div>
+  </form>
+</body>
+</html>
