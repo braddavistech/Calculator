@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+
+  <link rel="stylesheet" type="text/css" href="calculator.css"/>
+  <script type="text/javascript" src="calculator.js"></script>
+
+</head>
+<body>
+  <form class="calculatorBody" name="calculator">
+    <input type="text" class="calcDisplay" id="display" />
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="7" onclick="numInput(7)" />
+      <input type="button" class="calcButton" value="8" onclick="numInput('8')" />
+      <input type="button" class="calcButton" value="9" onclick="numInput('9')" />
+      <input type="button" class="calcButton" value="+" onclick="setOperation('add')" />
+      <input type="button" class="calcEquals" value="=" onclick="calculate()" />
+    </div>
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="4" onclick="numInput('4')" />
+      <input type="button" class="calcButton" value="5" onclick="numInput('5')" />
+      <input type="button" class="calcButton" value="6" onclick="numInput('6')" />
+      <input type="button" class="calcButton" value="-" onclick="setOperation('subtract')" />
+    </div>
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="1" onclick="numInput('1')" />
+      <input type="button" class="calcButton" value="2" onclick="numInput('2')" />
+      <input type="button" class="calcButton" value="3" onclick="numInput('3')" />
+      <input type="button" class="calcButton" value="x" onclick="setOperation('multiply')" />
+    </div>
+    <div class="calcRow">
+      <input type="button" class="calcButton" value="0" onclick="numInput('0')" />
+      <input type="button" class="calcButton" value="." onclick="insertDecimal('.')" />
+      <input type="button" class="calcButton" value="C" onclick="clearDisplay()" />
+      <input type="button" class="calcButton" value="/" onclick="setOperation('divide')" />
+    </div>
+    <div class="tagLine">
+      <img src="https://cdn.rawgit.com/braddavistech/braddavistech.github.io/b4c9d1de/images/BDTechLogo.jpg" alt="Brad Davis Tech Logo" id="logo"/>
+      <p id="website">www.BradDavisTech.com</p>
+    </div>
+  </form>
+</body>
+</html>
